@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Workout Generator</string>
+    <string name="welcome">Welcome</string>
+    <string name="workout_generator">Workout anytime, anywhere.</string>
+    <string name="right_at_your_fingertips">Right at your fingertips.</string>
+    <string name="get_started">Get Started</string>
+    <string name="cartoon_image_of_a_flexed_bicep">Cartoon image of a flexed bicep</string>
+
+    <string name="profile_setup">Profile Setup</string>
+    <string name="male">Male</string>
+    <string name="name">Name</string>
+    <string name="female">Female</string>
+    <string name="age">Age</string>
+    <string name="gender">Gender</string>
+    <string name="clear">Clear</string>
+
+    <string name="enter_your_age_here">Enter your age here</string>
+    <string name="enter_your_name_here">Enter your name here</string>
+    <string name="save">Save</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="confirmation_dialog_title">Confirmation Dialog</string>
+    <string name="next">Next</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="setupInfoText">Enter your information below so we can customize your recommendations.</string>
+    <string name="editInfoText">Update your profile information below, or click cancel to keep your original settings.</string>
+    <string name="congratulations">CONGRATULATIONS!</string>
+    <string name="replay_button_text">Replay Button for Video</string>
+
+    <!-- String array for workout title & workout info -->
+    <string-array name="workout_title">
+        <item>Workout1_title</item>
+        <item>Workout2_title</item>
+        <item>Workout3_title</item>
+    </string-array>
+
+    <string-array name="workout_info">
+        <item>workout1_info</item>
+        <item>workout2_info</item>
+        <item>workout3_info</item>
+    </string-array>
+
+
+
+</resources>

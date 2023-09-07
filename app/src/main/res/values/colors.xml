@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Text-->
+    <color name="textColor">#000000</color>
+    <color name="textColorSecondary">#4C4C4C</color>
+
+    <!--Background-->
+    <color name="page_bg">#C1E5FF</color>
+    <color name="frame_bg">#EEF9FF</color>
+    <color name="cardview_bg">#E4F5FF</color>
+
+    <!--Button-->
+    <color name="button_color">#87C4F3</color>
+    <!--<color name="button_color">#DFDFDF</color>-->
+
+    <color name="warning_red">#FD9090</color>
+
+    <color name="agree_green">#D5F8D6</color>
+    <color name="disagree_red">#F6E2E1</color>
+    <color name="neutral_grey">#CACACA</color>
+
+    <!--Accent-->
+    <color name="accent_color">#549CD1</color>
+
+    <!--General Colors-->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+
+
+</resources>

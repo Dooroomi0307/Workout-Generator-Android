@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_dialog"
+    tools:context=".CompletionDialog">
+
+    <TextView
+        android:id="@+id/congratsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/congratulations"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/congratsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="4dp"
+        android:text="You have finished your workout!"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/congratsTitle" />
+
+    <Button
+        android:id="@+id/buttonReplay"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/button_replay"
+        android:contentDescription="@string/replay_button_text"
+        android:foreground="@drawable/button_replay"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/linearButtonLayout"
+        app:layout_constraintTop_toBottomOf="@+id/questionRestartText" />
+
+    <TextView
+        android:id="@+id/questionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:text="Would you like to \n try another workout?"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/congratsText" />
+
+    <TextView
+        android:id="@+id/questionRestartText"
+        android:layout_width="239dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="18dp"
+        android:text="Or click here to restart \nyour workout"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/questionText"
+        app:layout_constraintTop_toBottomOf="@+id/congratsText" />
+
+    <TextView
+        android:id="@+id/blankLabelToSetBoundaries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="244dp"
+        android:text="          "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearButtonLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearButtonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="76dp"
+        android:layout_marginStart="22dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionText">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/yesButtonContainer"
+            android:layout_width="92dp"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonYes"
+                android:layout_width="88dp"
+                android:layout_height="52dp"
+                android:backgroundTint="@color/agree_green"
+                android:text="Yes"
+                android:textColor="@color/textColor"
+                app:cornerRadius="26dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/middlePadding"
+            android:layout_width="40dp"
+            android:layout_height="match_parent">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/noButtonContainer"
+            android:layout_width="92dp"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonNo"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:backgroundTint="@color/disagree_red"
+                android:text="No"
+                android:textColor="@color/textColor"
+                app:cornerRadius="26dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

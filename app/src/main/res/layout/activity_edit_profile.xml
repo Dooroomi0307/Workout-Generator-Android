@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".EditProfile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/profileFrameRounded"
+                android:layout_width="363dp"
+                android:layout_height="599dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rounded_frame"
+                android:elevation="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editInformationText">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/profileContainer"
+                    android:layout_width="363dp"
+                    android:layout_height="599dp">
+
+                    <Button
+                        android:id="@+id/cancelButton"
+                        android:layout_width="93dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:backgroundTint="@color/warning_red"
+                        android:onClick="cancelChanges"
+                        android:text="@string/cancel"
+                        android:textColor="@color/textColor"
+                        android:textSize="14sp"
+                        app:cornerRadius="26dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <Button
+                        android:id="@+id/clearButton"
+                        android:layout_width="85dp"
+                        android:layout_height="52dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="16dp"
+                        android:backgroundTint="@color/button_color"
+                        android:onClick="clearAllFields"
+                        android:text="@string/clear"
+                        android:textColor="@color/textColor"
+                        android:textSize="14sp"
+                        app:cornerRadius="26dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/confirmButton" />
+
+                    <TextView
+                        android:id="@+id/genderEmptyAlert"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:textColor="#EC4747"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/chooseGenderGroup" />
+
+                    <TextView
+                        android:id="@+id/ageEmptyAlert"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:textColor="#EC4747"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ageField" />
+
+                    <Button
+                        android:id="@+id/confirmButton"
+                        android:layout_width="85dp"
+                        android:layout_height="52dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:backgroundTint="@color/button_color"
+                        android:onClick="saveProfileInfo"
+                        android:text="@string/save"
+                        android:textColor="@color/textColor"
+                        android:textSize="14sp"
+                        app:cornerRadius="26dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/genderLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="269dp"
+                        android:text="@string/gender"
+                        android:textColor="@color/textColorSecondary"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ageEmptyAlert" />
+
+                    <EditText
+                        android:id="@+id/ageField"
+                        android:layout_width="330dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="16dp"
+                        android:autofillHints="age"
+                        android:ems="10"
+                        android:hint="@string/enter_your_age_here"
+                        android:inputType="number"
+                        android:textColor="@color/textColorSecondary"
+                        android:textColorHighlight="@color/accent_color"
+                        android:textColorHint="#838383"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ageLabel" />
+
+                    <TextView
+                        android:id="@+id/ageLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="299dp"
+                        android:text="@string/age"
+                        android:textColor="@color/textColorSecondary"
+                        android:textColorHint="#838383"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/nameEmptyAlert" />
+
+                    <TextView
+                        android:id="@+id/nameLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginEnd="278dp"
+                        android:text="@string/name"
+                        android:textColor="@color/textColorSecondary"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/nameField"
+                        android:layout_width="330dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="16dp"
+                        android:autofillHints="fullname"
+                        android:ems="10"
+                        android:hint="@string/enter_your_name_here"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/textColorSecondary"
+                        android:textColorHighlight="@color/accent_color"
+                        android:textColorHint="#838383"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
+
+                    <RadioGroup
+                        android:id="@+id/chooseGenderGroup"
+                        android:layout_width="233dp"
+                        android:layout_height="96dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="113dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/genderLabel">
+
+                        <RadioButton
+                            android:id="@+id/maleRadio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/male"
+                            android:textColor="@color/textColor" />
+
+                        <RadioButton
+                            android:id="@+id/femaleRadio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/female"
+                            android:textColor="@color/textColor" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/nameEmptyAlert"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:textColor="#EC4747"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/nameField" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/editInformationText"
+                android:layout_width="363dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/editInfoText"
+                android:textColor="@color/textColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profileLabel" />
+
+            <TextView
+                android:id="@+id/profileLabel"
+                android:layout_width="363dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/edit_profile"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

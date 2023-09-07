@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    tools:context=".WelcomeActivity">
+
+    <FrameLayout
+        android:id="@+id/profileFrameRounded"
+        android:layout_width="363dp"
+        android:layout_height="599dp"
+        android:background="@drawable/rounded_frame"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeLabel">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profileContainer"
+            android:layout_width="363dp"
+            android:layout_height="599dp">
+
+            <ImageView
+                android:id="@+id/bicepImage"
+                android:layout_width="276dp"
+                android:layout_height="329dp"
+                android:layout_marginStart="43dp"
+                android:layout_marginTop="34dp"
+                android:contentDescription="@string/cartoon_image_of_a_flexed_bicep"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/workoutLabel2"
+                app:srcCompat="@drawable/bicep" />
+
+            <TextView
+                android:id="@+id/workoutLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/workout_generator"
+                android:textAlignment="center"
+                android:textColor="@color/textColor"
+                android:textSize="23sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/workoutLabel2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/right_at_your_fingertips"
+                android:textAlignment="center"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/workoutLabel" />
+
+            <Button
+                android:id="@+id/getStartedButton"
+                android:layout_width="254dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/button_color"
+                android:onClick="getStarted"
+                android:text="@string/get_started"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                app:cornerRadius="26dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bicepImage" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/welcomeLabel"
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/welcome"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
